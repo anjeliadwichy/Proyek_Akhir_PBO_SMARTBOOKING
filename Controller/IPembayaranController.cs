@@ -13,5 +13,6 @@ namespace projectakhirsem2.Controller
         List<ModelPembayaran> GetAll();
         void Add(int total_harga, DateTime tanggal_pembayaran, int id_metode_pembayaran, int id_booking);
         DataTable GetBlmBayar();
+        List<ModelPembayaran> GetAllPembayaranAdmin();
     }
 }
