@@ -73,7 +73,7 @@ CREATE TABLE review (
   rating INT NOT NULL CHECK (rating >= 1 AND rating <= 5),
   komentar TEXT,
   tanggal_review DATE NOT NULL,
-  id_booking INT NOT NULL,
+  id_booking INT NOT NULL UNIQUE,
   FOREIGN KEY (id_booking) REFERENCES booking(id_booking)
 );
 
