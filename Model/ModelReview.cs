@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace projectakhirsem2.Model
 {
-    public class ModelBookingRelated
+    public class ModelBookingRelated //OOP INHERITANCE, kelas induk
     {
-        public int id_booking { get; set; }
+        public int id_booking { get; set; } //bisa di getset dr luar kelas OOP ENCAPSULATION
 
-        public ModelBookingRelated(int id_booking)
+        public ModelBookingRelated(int id_booking) //constructor
         {
-            this.id_booking = id_booking;
+            this.id_booking = id_booking; //mengisi properti id_booking dg argumen dr parameter
         }
     }
 
-    public class ModelReview : ModelBookingRelated
+    public class ModelReview : ModelBookingRelated //kelas turunan
     {
         public int rating { get; set; }
         public string komentar { get; set; }
