@@ -13,6 +13,10 @@ namespace projectakhirsem2.Model
             public string nama_paket { get; set; }
             public int harga { get; set; }
             public string deskripsi { get; set; }
+            public string DisplayInfo
+            {
+                get { return $"{nama_paket} - Rp{harga:N0}"; }
+            }
 
             public ModelPaketJasa(int id_paket_jasa, string nama_paket, int harga, string deskripsi, int id_jenis_layanan, string nama_jenis)
                 : base(id_jenis_layanan, nama_jenis)
@@ -23,9 +27,5 @@ namespace projectakhirsem2.Model
                 this.deskripsi = deskripsi;
             }
 
-            public override string GetDisplayInfo()
-            {
-                return $"{nama_paket} - Rp{harga:N0}";
-            }
         }
 }
