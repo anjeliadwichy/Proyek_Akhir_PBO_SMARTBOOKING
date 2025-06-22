@@ -16,9 +16,5 @@ namespace projectakhirsem2.Model
             this.id_jenis_layanan = id_jenis_layanan;
             this.nama_jenis = nama_jenis;
         }
-        public virtual string GetDisplayInfo()
-        {
-            return nama_jenis;
-        }
     }
 }
