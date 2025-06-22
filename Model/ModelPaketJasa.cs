@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace projectakhirsem2.Model
 {
-    public class ModelLayananBase
-    {
+
         public class ModelPaketJasa : ModelJenisLayanan
         {
             public int id_paket_jasa { get; set; }
@@ -29,5 +28,4 @@ namespace projectakhirsem2.Model
                 return $"{nama_paket} - Rp{harga:N0}";
             }
         }
-    }
 }
