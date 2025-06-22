@@ -1,4 +1,4 @@
-﻿using Npgsql;
+using Npgsql;
 using projectakhirsem2.Database;
 using projectakhirsem2.Model;
 using System;
@@ -22,9 +22,10 @@ namespace projectakhirsem2.Controller
                     var paket = new ModelPaketJasa(
                         Convert.ToInt32(row["id_paket_jasa"]),
                         row["nama_paket"].ToString(),
-                        Convert.ToInt32(row["id_jenis_layanan"]),
                         Convert.ToInt32(row["harga"]),
-                        row["deskripsi"].ToString()
+                        row["deskripsi"].ToString(),
+                        Convert.ToInt32(row["id_jenis_layanan"]),
+                        "-"
                     );
                     list.Add(paket);
                 }
