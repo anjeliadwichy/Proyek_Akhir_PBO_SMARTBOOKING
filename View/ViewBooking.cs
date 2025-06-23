@@ -1,4 +1,4 @@
-﻿using projectakhirsem2.Controller;
+using projectakhirsem2.Controller;
 using projectakhirsem2.Helpers;
 using System;
 using System.Collections.Generic;
@@ -46,7 +46,7 @@ namespace projectakhirsem2.View
             }
         }
 
-        public virtual void ClearInputFields()
+        protected void ClearInputFields()
         {
             dtptglmain.Value = DateTime.Now;
             dtpwaktumulai.Text = "00:00";
@@ -57,7 +57,7 @@ namespace projectakhirsem2.View
             cbstatus.SelectedValue = 1;
         }
 
-        public virtual void LoadBookingData()
+        protected void LoadBookingData()
         {
             dgvbooking.DataSource = bookingController.ViewRiwBooking(Session.id_pengguna);
         }
