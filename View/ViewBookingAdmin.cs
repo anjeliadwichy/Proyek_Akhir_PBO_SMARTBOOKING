@@ -159,7 +159,8 @@ namespace projectakhirsem2.View
             {
                 DataGridViewRow row = dgvbooking.Rows[e.RowIndex];
                 tbid.Text = row.Cells["id_booking"].Value?.ToString();
-                cbpaket.Text = row.Cells["id_paket_jasa"].Value?.ToString();
+                cbpaket.SelectedValue = row.Cells["id_paket_jasa"].Value;
+                //cbpaket.Text = row.Cells["id_paket_jasa"].Value?.ToString();
                 dtptglbooking.Value = Convert.ToDateTime(row.Cells["tanggal_booking"].Value);
                 dtptglmain.Value = Convert.ToDateTime(row.Cells["tanggal_pelaksanaan"].Value);
                 if (TimeSpan.TryParse(row.Cells["waktu_mulai"].Value?.ToString(), out TimeSpan waktuMulai))
